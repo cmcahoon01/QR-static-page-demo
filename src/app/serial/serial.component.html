@@ -1,0 +1,18 @@
+<p>Vehicle ID: {{ serialNumber }}</p>
+<div class="container">
+  <h2>Public API images</h2>
+  <div *ngIf="loading" class="loading">Loading images...</div>
+  <div *ngIf="error" class="error">{{ error }}</div>
+
+  <div class="image-grid">
+    <div *ngFor="let image of images" class="image-card">
+      <img [src]="image.download_url"
+           [alt]="'Photo by ' + image.author"
+           (error)="handleImageError($event)" width="300" >
+      <div class="image-info">
+        <p>By: {{ image.author }}</p>
+        <p>Size: {{ image.width }} x {{ image.height }}</p>
+      </div>
+    </div>
+  </div>
+</div>
