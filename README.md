@@ -1,0 +1,1 @@
+# QR-static-page-demo
