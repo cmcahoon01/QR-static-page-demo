@@ -3,5 +3,8 @@
     {
       "route": "/*"
     }
-  ]
+  ],
+  "navigationFallback": {
+    "rewrite": "src/index.html"
+  }
 }
