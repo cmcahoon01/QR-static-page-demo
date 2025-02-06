@@ -1,6 +1,6 @@
 import { Routes } from '@angular/router';
-import {AppComponent} from './app.component';
+import { SerialComponent } from './serial/serial.component';
 
 export const routes: Routes = [
-  { path: ':serial', component: AppComponent }  // This makes ":serial" a route parameter
+  { path: ':serial', component: SerialComponent }  // This makes ":serial" a route parameter
 ];

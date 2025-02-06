@@ -1,21 +1,13 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-
+import { Component } from '@angular/core';
+import { RouterOutlet } from '@angular/router';  // Add this
 
 @Component({
   selector: 'app-root',
-  imports: [],
+  standalone: true,  // Add this
+  imports: [RouterOutlet],  // Add this
   templateUrl: './app.component.html',
-  styleUrl: './app.component.sass'
+  styleUrl: './app.component.css'
 })
-export class AppComponent implements OnInit {
-  serialNumber: string | null = null;
-
-  constructor(private route: ActivatedRoute) {}
-
-  ngOnInit(): void {
-    this.serialNumber = this.route.snapshot.paramMap.get('serial');
-    console.log('Serial Number:', this.serialNumber);
-  }
-  title = 'QR-static-page-demo';
+export class AppComponent {
+  title = 'routesExperiment';
 }
