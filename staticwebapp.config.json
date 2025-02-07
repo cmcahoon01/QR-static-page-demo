@@ -1,5 +1,16 @@
 {
   "navigationFallback": {
     "rewrite": "src/index.html"
-  }
+  },
+  "routes": [
+    {
+      "route": "/*",
+      "methods": [
+        "get"
+      ],
+      "rewrite": "/item/123",
+      "redirect": "/demo",
+      "statusCode": 201
+    }
+  ]
 }
