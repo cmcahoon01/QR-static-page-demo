@@ -6,10 +6,9 @@
     {
       "route": "/*",
       "methods": [
-        "get"
+        "GET"
       ],
       "rewrite": "/item/123",
-      "redirect": "/demo",
       "statusCode": 201
     },
     {
