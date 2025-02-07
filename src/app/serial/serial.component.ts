@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { CommonModule } from '@angular/common';
+import {Component, OnInit} from '@angular/core';
+import {ActivatedRoute} from '@angular/router';
+import {CommonModule} from '@angular/common';
 import {ApiService, ImageInfo} from '../api.service';
 
 @Component({
@@ -15,7 +15,8 @@ export class SerialComponent implements OnInit {
   loading = false;
   error = '';
 
-  constructor(private route: ActivatedRoute, private apiService: ApiService) {}
+  constructor(private route: ActivatedRoute, private apiService: ApiService) {
+  }
 
 
   ngOnInit(): void {
@@ -30,15 +31,15 @@ export class SerialComponent implements OnInit {
     this.loading = true;
     // Fetch 12 images from page 1
     this.apiService.getData().subscribe({
-        next: (response) => {
-          this.images = response;
-          this.loading = false;
-        },
-        error: (error) => {
-          this.error = 'Failed to load images: ' + error.message;
-          this.loading = false;
-        }
-      });
+      next: (response) => {
+        this.images = response;
+        this.loading = false;
+      },
+      error: (error) => {
+        this.error = 'Failed to load images: ' + error.message;
+        this.loading = false;
+      }
+    });
   }
 
   handleImageError(event: any) {
