@@ -3,12 +3,13 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 export interface ImageInfo {
-  id: string;
-  author: string;
-  width: number;
-  height: number;
+  date: string;
+  explanation: string;
+  hdurl: string;
+  media_type: string;
+  service_version: string;
+  title: string;
   url: string;
-  download_url: string;
 }
 @Injectable({
   providedIn: 'root',
@@ -16,7 +17,7 @@ export interface ImageInfo {
 export class ApiService {
   constructor(private http: HttpClient) {}
 
-  getData(): Observable<any> {
-    return this.http.get<ImageInfo[]>('https://picsum.photos/v2/list?page=1&limit=12')
+  getData(): Observable<ImageInfo[]> {
+    return this.http.get<ImageInfo[]>('https://api.nasa.gov/planetary/apod?api_key=kGezatJCtObPmwUDatGmpP6ijgHzBoCoPuFpuFha&count=4');
   }
 }

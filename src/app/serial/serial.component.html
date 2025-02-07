@@ -1,19 +1,19 @@
 <main>
-<h1>Ditch Witch QR demo</h1>
-<p>Scanned Vehicle ID: {{ serialNumber }}</p>
+<h1>Qr landing page demo</h1>
+<p>Scanned Serial Number: {{ serialNumber }}</p>
 <div class="container">
-  <h2>Images pulled from a public api</h2>
+  <h2>Images pulled from a demo api</h2>
   <div *ngIf="loading" class="loading">Loading images...</div>
   <div *ngIf="error" class="error">{{ error }}</div>
 
   <div class="image-grid">
     <div *ngFor="let image of images" class="image-card">
-      <img [src]="image.download_url"
-           [alt]="'Photo by ' + image.author"
+      <img [src]="image.url"
+           [alt]="image.explanation"
            (error)="handleImageError($event)" width="300" >
       <div class="image-info">
-        <p>By: {{ image.author }}</p>
-        <p>Size: {{ image.width }} x {{ image.height }}</p>
+        <p>{{ image.title }}</p>
+        <p>{{image.date}}</p>
       </div>
     </div>
   </div>

@@ -3,5 +3,5 @@ import { SerialComponent } from './serial/serial.component';
 
 export const routes: Routes = [
   { path: ':serial', component: SerialComponent },
-  { path: '**', redirectTo: '/No-Vehicle', pathMatch: 'full' },  // This will catch invalid routes
+  { path: '**', redirectTo: '/No-Serial', pathMatch: 'full' },  // This will catch invalid routes
 ];
