@@ -8,8 +8,7 @@
       "methods": [
         "GET"
       ],
-      "rewrite": "/item/123",
-      "statusCode": 201
+      "rewrite": "/item/123"
     },
     {
       "route": "/id",
