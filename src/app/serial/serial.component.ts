@@ -8,6 +8,7 @@ import {ApiService, ImageInfo} from '../api.service';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './serial.component.html',
+  styleUrls: ['./serial.component.scss']
 })
 export class SerialComponent implements OnInit {
   serialNumber: string | null = null;

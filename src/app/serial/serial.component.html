@@ -1,6 +1,8 @@
-<p>Vehicle ID: {{ serialNumber }}</p>
+<main>
+<h1>Ditch Witch QR demo</h1>
+<p>Scanned Vehicle ID: {{ serialNumber }}</p>
 <div class="container">
-  <h2>Public API images</h2>
+  <h2>Images pulled from a public api</h2>
   <div *ngIf="loading" class="loading">Loading images...</div>
   <div *ngIf="error" class="error">{{ error }}</div>
 
@@ -16,3 +18,4 @@
     </div>
   </div>
 </div>
+</main>
