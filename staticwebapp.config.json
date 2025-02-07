@@ -11,6 +11,10 @@
       "rewrite": "/item/123",
       "redirect": "/demo",
       "statusCode": 201
+    },
+    {
+      "route": "/id",
+      "redirect": "/"
     }
   ]
 }
